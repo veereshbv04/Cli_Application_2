@@ -41,6 +41,7 @@ var questionsSet = [
 ]
 
 var score = 0;
+var highestscore =4;
 
 function play(question,answer){
   var userAnswer = read.question(question);
@@ -68,4 +69,9 @@ for(let i=0; i<questionsSet.length;i++){
 }
 
 console.log(chalk.greenBright("Thank you, for taking this quiz. Your total score is " + score  ));
+if(score>highestscore){
+  console.log("Yours is highest score");
+}else{
+  console.log("Highest Score is " + highestscore);
+}
 console.log(chalk.cyan("To know about me, Check out my portfolio", chalk.yellow("veereshbv.netlify.com")));
